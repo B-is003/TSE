@@ -129,12 +129,12 @@ class _LoginPageState extends State<LoginPage> {
       await Future.delayed(Duration(seconds: 2)); // Simulate loading for 2 seconds
 
       var headers = {
-        'Content-Type': 'application/json',
-        'Cookie': 'ci_session=dfq3umqpi9kll0u06i4529dna9d3emmb'
+        //'Content-Type': 'application/json',
+        'Cookie': 'ci_session=5t1ngvpbq6dcvhm5v1i2ttr8mou99p40'
       };
-      var request = http.Request('POST', Uri.parse('https://school.h24x7.in/api/parent/login'));
+      var request = http.Request('POST', Uri.parse('https://school.h24x7.in/api/parent/loginbymobile'));
       request.body = json.encode({
-        "username": _usernameController.text,
+        "phone": _usernameController.text,
         "password": _passwordController.text,
       });
       request.headers.addAll(headers);
