@@ -17,7 +17,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Color(0xFF0CCBFF),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -27,21 +27,18 @@ class _LoginPageState extends State<LoginPage> {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15.0), // Adjust the radius as needed
               ),
-              color: Colors.blueGrey.shade100,
+              color:  Colors.grey.shade50,
               margin: EdgeInsets.all(20.0),
               elevation: 5.0,
               child: Padding(
-                padding: const EdgeInsets.only(top: 70.0, bottom: 70, left: 30, right: 30),
+                padding: const EdgeInsets.only(top: 25.0, bottom: 70, left: 30, right: 30),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Text(
-                      'TSE School',
-                      style: TextStyle(
-                        fontSize: 30.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.purple,
-                      ),
+                    Image(
+                      image: AssetImage('images/tselogo.png'),
+                      width: 200.0,
+                      height: 50.0,
                     ),
                     SizedBox(height: 10.0),
                     Text(
@@ -49,13 +46,13 @@ class _LoginPageState extends State<LoginPage> {
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
-                        color: Colors.purple,
+                        color: Color(0xFFe06317),
                       ),
                     ),
                     SizedBox(height: 25.0),
                     TextFormField(
                       controller: _usernameController,
-                      style: TextStyle(color: Colors.purple),
+                      style: TextStyle(color: Color(0xFFe06317)),
                       decoration: InputDecoration(
                         labelText: 'Username',
                         prefixIcon: Icon(Icons.person, color: Colors.deepPurple),
@@ -66,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                     TextFormField(
                       controller: _passwordController,
                       obscureText: !_passwordVisible,
-                      style: TextStyle(color: Colors.purple),
+                      style: TextStyle(color: Color(0xFFe06317)),
                       decoration: InputDecoration(
                         labelText: 'Password',
                         prefixIcon: Icon(Icons.lock, color: Colors.deepPurple),
@@ -105,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                               borderRadius: BorderRadius.circular(10.0),
                             ),
                             elevation: 5.0,
-                            primary: Colors.purple.shade900,
+                            primary: Color(0xFFe06317),
                           ),
                         ),
                       ),
